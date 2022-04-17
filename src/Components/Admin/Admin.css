@@ -1,0 +1,16 @@
+
+body{
+    background-color: #011627;
+    position: relative;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.dashbord table tbody tr td img{
+    width: 60px;
+    height: 60px;
+    object-fit:cover;
+}
+.dashbord table tbody tr td a{
+    margin: 0 2px;
+}

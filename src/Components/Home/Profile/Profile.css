@@ -1,0 +1,33 @@
+
+.profile_info table tbody tr th{
+    padding: 10px 20px !important;
+}
+.profile_info table tbody tr th i{
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.social_info table tbody tr th{
+    padding: 10px 20px !important;
+}
+.social_info table tbody tr th i{
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.profile_section img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.profile_section .card-body p{
+    margin: 10px 0;
+}
+.profile_section .card-body button{
+    margin: 20px 5px;
+}

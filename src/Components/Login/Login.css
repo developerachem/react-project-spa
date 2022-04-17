@@ -1,0 +1,26 @@
+label{
+    cursor: pointer;
+}
+.regstration{
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat( 2 , 1fr);
+    background-color: #0b2f2e;
+    grid-column-gap: 30px;
+    box-shadow: 10px 20px 50px rgba(255, 255, 255, 0.071);
+}
+.regstration .regstration_logo{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.regstration .regstration_logo img{
+    width: 450px;
+}
+.regstration .regstration_form{
+    background-color: #0e0e0ec3;
+    padding: 30px;
+}
+/* .regstration .regstration_form label{}
+.regstration .regstration_form input{} */

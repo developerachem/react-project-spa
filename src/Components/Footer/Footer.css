@@ -1,0 +1,12 @@
+
+.footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    background-color: #182024;
+    padding: 20px 0;
+    width: 100%;
+}
+.footer p{
+    color: white;
+}

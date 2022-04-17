@@ -1,0 +1,15 @@
+.main_menu{
+    background-color: #182024;
+    padding: 10px 0;
+
+}
+
+.main_menu .logo a img{
+    width: 80px;
+}
+.main_menu .menu ul li a{ 
+    margin: 0 10px;
+    color: #f7f7f7;
+    font-size: 18px;
+    font-weight: 600;
+}
