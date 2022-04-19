@@ -38,8 +38,8 @@ const EditProfile = () => {
         github: "",
         youtube: ""
     })
-    console.log(editData);
-     // Edit Params
+
+    // Edit Params
     const {id } = useParams();
 
     // Edit Data Use Effect
@@ -51,7 +51,7 @@ const EditProfile = () => {
                 uName: res.data.uName,
                 email: res.data.email,
                 phone: res.data.phone,
-                gender: "",
+                gender: res.data.gender,
                 skill: res.data.skill,
                 image: res.data.image,
                 facebook: res.data.facebook,
@@ -63,8 +63,6 @@ const EditProfile = () => {
             })
         })
     }, [])
-
-    
 
     // Edit Form Handaler
     const handelEditForm = (e) => {
@@ -83,8 +81,6 @@ const EditProfile = () => {
             })
 
         }else{
-
-            console.log("data ok");
             
             // Edite Data Patch In Server
             axios.patch('http://localhost:5050/devsData/' + id , editData ).then( res => {
@@ -105,8 +101,6 @@ const EditProfile = () => {
                 }, 5000)
             })
         }
-
-
     }
 
     return (
@@ -153,9 +147,9 @@ const EditProfile = () => {
                                                     <Form.Control value={ editData.phone } onChange={ e => setEditData({ ...editData , phone : e.target.value })} placeholder="Phone"></Form.Control>
                                                 </div>
                                                 <div className="mb-3">
-                                                    <Form.Label>Name :</Form.Label> <br />
-                                                    <input type="radio" value='Male' id='Male' name='gender' onChange={ e => setEditData({ ...editData , gender : e.target.value })} /> <label htmlFor="Male">Male</label> &nbsp;
-                                                    <input type="radio" value='Female' id='Female' name='gender'  onChange={ e => setEditData({ ...editData , gender : e.target.value })} /> <label htmlFor="Female">Female</label>
+                                                    <Form.Label>Gender :</Form.Label> <br />
+                                                    <input type="radio" checked={ editData.gender === "Male" ? true : false } value='Male' id='Male' name='gender' onChange={ e => setEditData({ ...editData , gender : e.target.value })} /> <label htmlFor="Male">Male</label> &nbsp;
+                                                    <input type="radio" checked={ editData.gender === "Female" ? true : false } value='Female' id='Female' name='gender'  onChange={ e => setEditData({ ...editData , gender : e.target.value })} /> <label htmlFor="Female">Female</label>
                                                 </div>
                                                 <div className="mb-3">
                                                     <Form.Label>Skill :</Form.Label>
